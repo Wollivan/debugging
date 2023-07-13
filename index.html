@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Debugging</title>
+  </head>
+  <body>
+    <h1>Debugging 101</h1>
+    <section>
+      <p>Before we start, let's get prettier working.</p>
+      <ul>
+        <li>Click the icon of 4 boxes on the left of VSCode</li>
+        <li>Type Prettier in the search bar</li>
+        <li>Install the first item in the list</li>
+        Next
+        <li>Click the cog in the bottom left of your screen</li>
+        <li>Click settings</li>
+        <li>In the search bar at the top, type "formatter"</li>
+        <li>Make sure the "Editor: Default Formatter" is set to "Prettier Code Formatter"</li>
+        <li>Make sure the "Editor: Format On Save" box is checked</li>
+      </ul>
+    </section>
+
+    <h2>Types of errors</h2>
+    <section>
+      <h3>Syntactical</h3>
+      <p>Been learning PHP Java Python or Rust?</p>
+      <p>Syntax errors are when you use symbols that aren't part of the language you are using.</p>
+      <p>Example: using x instead of * to multiple numbers</p>
+
+      <p>Additionally, when you finally figure out the correct symbols to use, but you're using them in the wrong way.</p>
+      <p>Example: if(num1 = num2)</p>
+      <p>Here we are assigning the value of num1, instead of comparing it to num2 with ==</p>
+    </section>
+    <section>
+      <h3>Logic</h3>
+      <p>So you've got the right symbols, you're using them correctly, so there isn't an actual error.</p>
+      <p>But now you are using them in a way that doesn't do the thing you're trying to accomplish.</p>
+      <p>
+        Example: comparing the wrong variables for your conditionals, using a for loop but the condition is checking the
+        wrong thing.
+      </p>
+    </section>
+    <section>
+      <h3>Execution</h3>
+      <p>
+        You've now gone off the reserve, and your code is just straight wrong. Maybe you started writing a function but
+        forgot the closing }. Maybe you made a new const but didn't give it a value.
+      </p>
+    </section>
+    <h2>Ways we can debug code:</h2>
+    <section>
+      <h3>Check you code is actually running <i>at all</i></h3>
+      <p>Put a console.log() at the top of the file to make certain the file is running even a little bit!</p>
+    </section>
+    <section>
+      <h3>console.log() 2: Electric Boogaloo</h3>
+      <p>- One of the most common causes of the code not working the way you expect, is your code isn't being reached.</p>
+      <p>
+        - You can put console logs inside functions, for loops and if statements that already exist in your code, to see
+        if/when/how many times its being called
+      </p>
+      <h4>Example:</h4>
+      <p>
+        An if statement inside a for loop inside a function not doing what we want. There are 2 ways to fix a bug like this:
+        work your way UP the hierarchy or work your way DOWN the hierarchy
+      </p>
+      <button id="test1Button">Run logTheProp() function</button>
+    </section>
+    <section>
+      <h3>Check the console in your browser</h3>
+      <p>- If there is a literal error on your page, its going to tell you EXACTLY where the issue is.</p>
+      <p>- An error on line 10 will mean the code on line 20 WON'T RUN</p>
+      <p>
+        - So its easy to mistake the lack of something happening with it being broken, instead of it being an entirely
+        separate issue
+      </p>
+      <h4>Example:</h4>
+      <p>Error on one line 22 breaking something later</p>
+      <button id="test2Button">Run line22BrokeMyHeart() function</button>
+    </section>
+    <section>
+      <h3>Using the tools at your finger tips:</h3>
+      <p>Broswers have a some sweet tools to help you find the problem you're having, whether its HTML, CSS or JS</p>
+      <p>Here is a list of some of the tools in your browser:</p>
+      <ul class="veryimportantlist">
+        <li>Elements</li>
+        <li>Console (did you know you can reach the variables you've created here?)</li>
+        <li>Network (will be more useful during the 301)</li>
+      </ul>
+    </section>
+  </body>
+</html>
